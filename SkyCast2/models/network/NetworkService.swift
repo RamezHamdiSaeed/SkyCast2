@@ -7,12 +7,12 @@
 
 import Foundation
 protocol NetworkApiServices{
-    func fetchLocationWeatherConditions(completionHandler: @escaping (LocationResponse?)->Void)
+    func fetchLocationWeatherConditions(completionHandler: @escaping (WeatherData?)->Void)
 }
 
 class NetworkService : NetworkApiServices{
     
-     func fetchLocationWeatherConditions(completionHandler: @escaping (LocationResponse?)->Void) {
+     func fetchLocationWeatherConditions(completionHandler: @escaping (WeatherData?)->Void) {
         let locationWeatherConditionsURL = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=57d0921d2ce54c4496c75056241205&q=30.0715495,31.02")
         
         guard let url = locationWeatherConditionsURL else{
@@ -26,7 +26,9 @@ class NetworkService : NetworkApiServices{
                 return
             }
             do{
-                let result = try JSONDecoder().decode(LocationResponse.self, from: data)
+                let jsonDecoder = JSONDecoder()
+                jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                let result = try jsonDecoder.decode(WeatherData.self, from: data)
                 completionHandler(result)
             }
             catch{

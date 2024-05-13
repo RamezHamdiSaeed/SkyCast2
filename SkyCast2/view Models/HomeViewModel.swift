@@ -8,12 +8,12 @@
 import Foundation
 class HomeViewModel: ObservableObject {
     
-    @Published var locationResponse: LocationResponse?
+    @Published var weatherDataResponse: WeatherData?
     
     func getDataFromModel() {
         NetworkService().fetchLocationWeatherConditions { result in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.locationResponse = result
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.weatherDataResponse = result
             }
         }
     }

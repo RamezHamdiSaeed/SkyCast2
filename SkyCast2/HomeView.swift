@@ -87,7 +87,7 @@ struct HomeView: View {
                 .onAppear {
                     homeViewModel.getDataFromModel()
                 }
-                .onReceive(homeViewModel.$locationResponse) { response in
+                .onReceive(homeViewModel.$weatherDataResponse) { response in
                     print(response ?? "no data retreived over the network")
                 }
             }

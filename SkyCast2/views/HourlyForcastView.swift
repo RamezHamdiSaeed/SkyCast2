@@ -22,7 +22,7 @@ struct HourlyForcastView: View {
                     .edgesIgnoringSafeArea(.all)
                 List(){
                     ForEach(hourlyConditions, id: \.self) { item in
-                        HStack(spacing:80){
+                        HStack(spacing:60){
                             Text(item.time)
                                 .font(.system(size: 24,
                                               weight: .bold,
