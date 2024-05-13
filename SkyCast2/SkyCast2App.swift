@@ -11,7 +11,7 @@ import SwiftUI
 struct SkyCast2App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }

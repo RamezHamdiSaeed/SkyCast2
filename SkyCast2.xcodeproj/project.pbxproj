@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1E0C0D3F2BF16122003A63E4 /* SkyCast2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0C0D3E2BF16122003A63E4 /* SkyCast2App.swift */; };
-		1E0C0D412BF16122003A63E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0C0D402BF16122003A63E4 /* ContentView.swift */; };
+		1E0C0D412BF16122003A63E4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0C0D402BF16122003A63E4 /* HomeView.swift */; };
 		1E0C0D432BF16123003A63E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E0C0D422BF16123003A63E4 /* Assets.xcassets */; };
 		1E0C0D462BF16123003A63E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E0C0D452BF16123003A63E4 /* Preview Assets.xcassets */; };
+		1E97E8772BF1F9AC005C4FE9 /* HourlyForcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E97E8762BF1F9AC005C4FE9 /* HourlyForcastView.swift */; };
+		1E97E87A2BF203A7005C4FE9 /* WeatherConditionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E97E8792BF203A7005C4FE9 /* WeatherConditionCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1E0C0D3B2BF16122003A63E4 /* SkyCast2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyCast2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E0C0D3E2BF16122003A63E4 /* SkyCast2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyCast2App.swift; sourceTree = "<group>"; };
-		1E0C0D402BF16122003A63E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1E0C0D402BF16122003A63E4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1E0C0D422BF16123003A63E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E0C0D452BF16123003A63E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1E97E8762BF1F9AC005C4FE9 /* HourlyForcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForcastView.swift; sourceTree = "<group>"; };
+		1E97E8792BF203A7005C4FE9 /* WeatherConditionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditionCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,10 @@
 		1E0C0D3D2BF16122003A63E4 /* SkyCast2 */ = {
 			isa = PBXGroup;
 			children = (
+				1E97E8782BF20388005C4FE9 /* models */,
 				1E0C0D3E2BF16122003A63E4 /* SkyCast2App.swift */,
-				1E0C0D402BF16122003A63E4 /* ContentView.swift */,
+				1E97E8752BF1F950005C4FE9 /* views */,
+				1E0C0D402BF16122003A63E4 /* HomeView.swift */,
 				1E0C0D422BF16123003A63E4 /* Assets.xcassets */,
 				1E0C0D442BF16123003A63E4 /* Preview Content */,
 			);
@@ -65,6 +71,22 @@
 				1E0C0D452BF16123003A63E4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1E97E8752BF1F950005C4FE9 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				1E97E8762BF1F9AC005C4FE9 /* HourlyForcastView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		1E97E8782BF20388005C4FE9 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				1E97E8792BF203A7005C4FE9 /* WeatherConditionCellModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E0C0D412BF16122003A63E4 /* ContentView.swift in Sources */,
+				1E97E8772BF1F9AC005C4FE9 /* HourlyForcastView.swift in Sources */,
+				1E0C0D412BF16122003A63E4 /* HomeView.swift in Sources */,
+				1E97E87A2BF203A7005C4FE9 /* WeatherConditionCellModel.swift in Sources */,
 				1E0C0D3F2BF16122003A63E4 /* SkyCast2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
