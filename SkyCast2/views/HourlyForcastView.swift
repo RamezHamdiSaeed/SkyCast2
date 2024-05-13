@@ -53,7 +53,7 @@ struct HourlyForcastView: View {
                     .listRowBackground(Color.clear)
                 }
                 .listStyle(PlainListStyle())
-                .navigationTitle("List Example")
+                .navigationTitle("Hourly Forcast")
                 .padding()
             }
             

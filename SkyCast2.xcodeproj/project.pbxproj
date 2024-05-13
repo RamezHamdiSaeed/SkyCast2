@@ -13,6 +13,7 @@
 		1E0C0D462BF16123003A63E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E0C0D452BF16123003A63E4 /* Preview Assets.xcassets */; };
 		1E97E8772BF1F9AC005C4FE9 /* HourlyForcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E97E8762BF1F9AC005C4FE9 /* HourlyForcastView.swift */; };
 		1E97E87A2BF203A7005C4FE9 /* WeatherConditionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E97E8792BF203A7005C4FE9 /* WeatherConditionCellModel.swift */; };
+		1E97E87C2BF20693005C4FE9 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E97E87B2BF20693005C4FE9 /* LocationResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		1E0C0D452BF16123003A63E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E97E8762BF1F9AC005C4FE9 /* HourlyForcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForcastView.swift; sourceTree = "<group>"; };
 		1E97E8792BF203A7005C4FE9 /* WeatherConditionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditionCellModel.swift; sourceTree = "<group>"; };
+		1E97E87B2BF20693005C4FE9 /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				1E97E8792BF203A7005C4FE9 /* WeatherConditionCellModel.swift */,
+				1E97E87B2BF20693005C4FE9 /* LocationResponse.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E97E8772BF1F9AC005C4FE9 /* HourlyForcastView.swift in Sources */,
+				1E97E87C2BF20693005C4FE9 /* LocationResponse.swift in Sources */,
 				1E0C0D412BF16122003A63E4 /* HomeView.swift in Sources */,
 				1E97E87A2BF203A7005C4FE9 /* WeatherConditionCellModel.swift in Sources */,
 				1E0C0D3F2BF16122003A63E4 /* SkyCast2App.swift in Sources */,
