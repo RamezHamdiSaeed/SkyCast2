@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct HourlyForcastView: View {
-    let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"] // Sample data
-    let hourlyConditions : [WeatherConditionCellModel] = [WeatherConditionCellModel(time: "01:00", imagePath: "https://cdn.weatherapi.com/weather/64x64/day/113.png", temp: "20"),
-        WeatherConditionCellModel(time: "02:00", imagePath: "https://cdn.weatherapi.com/weather/64x64/day/113.png", temp: "20"),
-    ]
+   @Binding var hourlyConditions : [WeatherConditionCellModel]
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -22,14 +20,14 @@ struct HourlyForcastView: View {
                     .edgesIgnoringSafeArea(.all)
                 List(){
                     ForEach(hourlyConditions, id: \.self) { item in
-                        HStack(spacing:60){
+                        HStack(spacing:30){
                             Text(item.time)
                                 .font(.system(size: 24,
                                               weight: .bold,
                                               design: .default))
                                 .frame(width: 70,height: 50)
                             
-                            AsyncImage(url: URL(string: item.imagePath))
+                            AsyncImage(url: URL(string:"https:\(item.imagePath)"))
                             { phase in
                                 switch phase {
                                           case .success(let image):
@@ -47,7 +45,7 @@ struct HourlyForcastView: View {
                                 .font(.system(size: 24,
                                               weight: .bold,
                                               design: .default))
-                                .frame(width: 50,height: 50)
+                                .frame(width: 80,height: 50)
                         }
                     }
                     .listRowBackground(Color.clear)
@@ -61,8 +59,3 @@ struct HourlyForcastView: View {
     }
 }
 
-struct HourlyForcastView_Previews: PreviewProvider {
-    static var previews: some View {
-        HourlyForcastView()
-    }
-}
