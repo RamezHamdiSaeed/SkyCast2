@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var homeViewModel:HomeViewModel = HomeViewModel()
+    
+//    @State var products : [Product] = []
     var body: some View {
         NavigationView{
             ZStack{
@@ -81,6 +84,12 @@ struct HomeView: View {
                     Spacer()
                 }
                 .navigationTitle("Home")
+                .onAppear {
+                    homeViewModel.getDataFromModel()
+                }
+                .onReceive(homeViewModel.$locationResponse) { response in
+                    print(response ?? "no data retreived over the network")
+                }
             }
         }
     }
